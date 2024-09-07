@@ -1,0 +1,4 @@
+[submodule "internal/seed/templates"]
+	path = internal/seed/templates
+	url = https://github.com/theopenlane/jsonschema-templates.git
+	branch = subdir-move
