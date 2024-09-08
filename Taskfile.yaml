@@ -2,6 +2,7 @@ version: "3"
 
 env:
   CORE_HOST: http://localhost:17608
+  OPENLANECLOUD_HOST: http://localhost:17610
   GOFLAGS: -buildvcs=false
 
 includes:

@@ -27,6 +27,14 @@ func New(config Config, opts ...ClientOption) (_ Client, err error) {
 		Config: config,
 	}
 
+	// create the HTTP sling client if it is not set
+	if c.Requester == nil {
+		c.Requester, err = httpsling.New()
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	// apply the options to the client
 	for _, opt := range opts {
 		if opt == nil {
@@ -34,14 +42,6 @@ func New(config Config, opts ...ClientOption) (_ Client, err error) {
 		}
 
 		if err := opt(c); err != nil {
-			return nil, err
-		}
-	}
-
-	// create the HTTP sling client if it is not set
-	if c.Requester == nil {
-		c.Requester, err = httpsling.New()
-		if err != nil {
 			return nil, err
 		}
 	}

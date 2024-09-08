@@ -7,7 +7,7 @@ import (
 // Config is the configuration for the openlane cloud API client
 type Config struct {
 	// BaseURL is the base URL for the openlane API
-	BaseURL *url.URL `json:"baseUrl" yaml:"base_url" default:"http://localhost:17610"`
+	BaseURL *url.URL `json:"baseUrl" yaml:"baseUrl" koanf:"baseUrl" default:"http://localhost:17610"`
 }
 
 // NewDefaultConfig returns a new default configuration for the openlane cloud API client
