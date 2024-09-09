@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "common.names.fullname" . -}}-config
+  {{ $labels := include "common.tplvalues.merge" (dict "values" ( list .Values.api.commonLabels (include "common.labels.standard" .) ) "context" . ) }}
+  labels: {{- include "common.tplvalues.render" ( dict "value" $labels "context" $) | nindent 4 }}
+  {{- if .Values.api.commonAnnotations }}
+  {{- $annotations := include "common.tplvalues.merge" ( dict "values" ( list .Values.api.commonAnnotations ) "context" . ) }}
+  annotations: {{- include "common.tplvalues.render" ( dict "value" $annotations "context" $) | nindent 4 }}
+  {{- end }}
+data:
+  OPENLANECLOUD_REFRESH_INTERVAL: {{ .Values.openlanecloud.refresh_interval | default "10m" }}
+  OPENLANECLOUD_SERVER_DEBUG: {{ .Values.openlanecloud.server.debug | default false }}
+  OPENLANECLOUD_SERVER_DEV: {{ .Values.openlanecloud.server.dev | default false }}
+  OPENLANECLOUD_SERVER_LISTEN: {{ .Values.openlanecloud.server.listen | default ":17610" }}
+  OPENLANECLOUD_SERVER_SHUTDOWN_GRACE_PERIOD: {{ .Values.openlanecloud.server.shutdown_grace_period | default "10s" }}
+  OPENLANECLOUD_SERVER_READ_TIMEOUT: {{ .Values.openlanecloud.server.read_timeout | default "15s" }}
+  OPENLANECLOUD_SERVER_WRITE_TIMEOUT: {{ .Values.openlanecloud.server.write_timeout | default "15s" }}
+  OPENLANECLOUD_SERVER_IDLE_TIMEOUT: {{ .Values.openlanecloud.server.idle_timeout | default "30s" }}
+  OPENLANECLOUD_SERVER_READ_HEADER_TIMEOUT: {{ .Values.openlanecloud.server.read_header_timeout | default "2s" }}
+  OPENLANECLOUD_SERVER_TLS_ENABLED: {{ .Values.openlanecloud.server.tls.enabled | default false }}
+  OPENLANECLOUD_SERVER_TLS_CERT_FILE: {{ .Values.openlanecloud.server.tls.cert_file | default "server.crt" }}
+  OPENLANECLOUD_SERVER_TLS_CERT_KEY: {{ .Values.openlanecloud.server.tls.cert_key | default "server.key" }}
+  OPENLANECLOUD_SERVER_TLS_AUTO_CERT: {{ .Values.openlanecloud.server.tls.auto_cert | default false }}
+  OPENLANECLOUD_SERVER_CORS_ALLOW_ORIGINS: {{ .Values.openlanecloud.server.cors.allow_origins }}
+  OPENLANECLOUD_SERVER_CORS_COOKIE_INSECURE: {{ .Values.openlanecloud.server.cors.cookie_insecure }}
+  OPENLANECLOUD_SERVER_OPENLANE_TOKEN: {{ .Values.openlanecloud.server.openlane.token }}
+  OPENLANECLOUD_TRACER_ENABLED: {{ .Values.openlanecloud.tracer.enabled | default false }}
+  OPENLANECLOUD_TRACER_PROVIDER: {{ .Values.openlanecloud.tracer.provider | default "stdout" }}
+  OPENLANECLOUD_TRACER_ENVIRONMENT: {{ .Values.openlanecloud.tracer.environment | default "development" }}
+  OPENLANECLOUD_TRACER_STDOUT_PRETTY: {{ .Values.openlanecloud.tracer.stdout.pretty | default true }}
+  OPENLANECLOUD_TRACER_STDOUT_DISABLETIMESTAMP: {{ .Values.openlanecloud.tracer.stdout.disableTimestamp | default false }}
+  OPENLANECLOUD_TRACER_OTLP_ENDPOINT: {{ .Values.openlanecloud.tracer.otlp.endpoint | default "localhost:4317" }}
+  OPENLANECLOUD_TRACER_OTLP_INSECURE: {{ .Values.openlanecloud.tracer.otlp.insecure | default true }}
+  OPENLANECLOUD_TRACER_OTLP_CERTIFICATE: {{ .Values.openlanecloud.tracer.otlp.certificate }}
+  OPENLANECLOUD_TRACER_OTLP_HEADERS: {{ .Values.openlanecloud.tracer.otlp.headers }}
+  OPENLANECLOUD_TRACER_OTLP_COMPRESSION: {{ .Values.openlanecloud.tracer.otlp.compression }}
+  OPENLANECLOUD_TRACER_OTLP_TIMEOUT: {{ .Values.openlanecloud.tracer.otlp.timeout | default "10s" }}
+  OPENLANECLOUD_RATELIMIT_ENABLED: {{ .Values.openlanecloud.ratelimit.enabled | default false }}
+  OPENLANECLOUD_RATELIMIT_LIMIT: {{ .Values.openlanecloud.ratelimit.limit | default 10 }}
+  OPENLANECLOUD_RATELIMIT_BURST: {{ .Values.openlanecloud.ratelimit.burst | default 30 }}
+  OPENLANECLOUD_RATELIMIT_EXPIRES: {{ .Values.openlanecloud.ratelimit.expires | default "10m" }}

@@ -1,0 +1,9 @@
+version: "3"
+
+tasks:
+  build:
+    dir: ..
+    desc: builds the openlane-cloud docker image
+    cmds:
+      - "docker build -f docker/Dockerfile . -t openlane-cloud:dev"
+
