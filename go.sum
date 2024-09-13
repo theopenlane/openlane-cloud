@@ -152,8 +152,8 @@ github.com/manifoldco/promptui v0.9.0/go.mod h1:ka04sppxSGFAtxX0qhlYQjISsg9mR4GW
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/mattn/go-runewidth v0.0.16 h1:E5ScNMtiwvlvB5paMFdw9p4kSQzbXFikJ5SQO6TULQc=
 github.com/mattn/go-runewidth v0.0.16/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
-github.com/mattn/go-sqlite3 v1.14.22 h1:2gZY6PC6kBnID23Tichd1K+Z0oS6nE/XwU+Vz/5o4kU=
-github.com/mattn/go-sqlite3 v1.14.22/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
+github.com/mattn/go-sqlite3 v1.14.23 h1:gbShiuAP1W5j9UOksQ06aiiqPMxYecovVGwmTxWtuw0=
+github.com/mattn/go-sqlite3 v1.14.23/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
 github.com/mcuadros/go-defaults v1.2.0 h1:FODb8WSf0uGaY8elWJAkoLL0Ri6AlZ1bFlenk56oZtc=
 github.com/mcuadros/go-defaults v1.2.0/go.mod h1:WEZtHEVIGYVDqkKSWBdWKUVdRyKlMfulPaGDWIVeCWY=
 github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db h1:62I3jR2EmQ4l5rM/4FEfDWcRD+abF5XlKShorW5LRoQ=
@@ -239,8 +239,8 @@ github.com/theopenlane/httpsling v0.2.0 h1:5k/PoFA5jjak9dnijATFvTVTvgUSMFdEZeyct
 github.com/theopenlane/httpsling v0.2.0/go.mod h1:Ta/8bjv4JhKT0Xk1hD2Iott9BKLCqXvscmjolSB/bBY=
 github.com/theopenlane/iam v0.1.6 h1:ps6xLXHpnGy687uLPRZiD7034DRVqaWEfJLCJVMx95o=
 github.com/theopenlane/iam v0.1.6/go.mod h1:mOtYjuqUD7SX4EkwXFAYwf8+mwPDsRvTsLhAngqVIxM=
-github.com/theopenlane/utils v0.1.5 h1:4DRieQmsBF87n4lPjEkTt6s4iVRQaCGYlk2+C05lt3o=
-github.com/theopenlane/utils v0.1.5/go.mod h1:LWJzG9FfklsLlqWx/VdmfBMuNk700cWqHAwQL0299FM=
+github.com/theopenlane/utils v0.2.0 h1:+O5pBWA9cvlCjdwHDaJKwnSMAVRUh1Jgkzl4nYU3h7E=
+github.com/theopenlane/utils v0.2.0/go.mod h1:GdjAWxjiMavAMgRNqC6y5v4LUdCcCJlfuHHYU6LrrUw=
 github.com/ugorji/go/codec v1.2.12 h1:9LC83zGrHhuUA9l16C9AHXAqEV/2wBQ4nkvumAE65EE=
 github.com/ugorji/go/codec v1.2.12/go.mod h1:UNopzCgEMSXjBc6AOMqYvWC1ktqTAfzJZUZgYf6w6lg=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=

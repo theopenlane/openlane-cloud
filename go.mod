@@ -29,7 +29,7 @@ require (
 	github.com/theopenlane/echozap v0.1.0
 	github.com/theopenlane/httpsling v0.2.0
 	github.com/theopenlane/iam v0.1.6
-	github.com/theopenlane/utils v0.1.5
+	github.com/theopenlane/utils v0.2.0
 	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.27.0
 	golang.org/x/text v0.18.0
