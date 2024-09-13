@@ -1,19 +1,23 @@
 package cmd
 
 import (
-	"log"
+	"fmt"
+	"os"
+	"path/filepath"
+	"runtime/debug"
+	"time"
 
 	"github.com/knadh/koanf/providers/posflag"
 	"github.com/knadh/koanf/v2"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
-	"go.uber.org/zap"
 )
 
 const appName = "openlane-cloud"
 
 var (
-	logger *zap.SugaredLogger
-	k      *koanf.Koanf
+	k *koanf.Koanf
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -46,7 +50,7 @@ func init() {
 func initConfig() {
 	// Load config from flags, including defaults
 	if err := initCmdFlags(rootCmd); err != nil {
-		log.Fatalf("error loading config: %v", err)
+		log.Fatal().Err(err).Msg("error loading config")
 	}
 
 	setupLogging()
@@ -56,23 +60,38 @@ func initCmdFlags(cmd *cobra.Command) error {
 	return k.Load(posflag.Provider(cmd.Flags(), k.Delim(), k), nil)
 }
 
+// setupLogging sets up the logging defaults for the application
 func setupLogging() {
-	cfg := zap.NewProductionConfig()
+	// setup logging with time and app name
+	log.Logger = zerolog.New(os.Stderr).
+		With().Timestamp().
+		Logger().
+		With().Str("app", appName).
+		Logger()
+
+	// set the log level
+	zerolog.SetGlobalLevel(zerolog.InfoLevel)
+
+	// set the log level to debug if the debug flag is set and add additional information
 	if k.Bool("pretty") {
-		cfg = zap.NewDevelopmentConfig()
+		zerolog.SetGlobalLevel(zerolog.DebugLevel)
+
+		buildInfo, _ := debug.ReadBuildInfo()
+
+		log.Logger = log.Logger.With().
+			Caller().
+			Int("pid", os.Getpid()).
+			Str("go_version", buildInfo.GoVersion).Logger()
 	}
 
-	if k.Bool("debug") {
-		cfg.Level = zap.NewAtomicLevelAt(zap.DebugLevel)
-	} else {
-		cfg.Level = zap.NewAtomicLevelAt(zap.InfoLevel)
+	// pretty logging for development
+	if k.Bool("pretty") {
+		log.Logger = log.Output(zerolog.ConsoleWriter{
+			Out:        os.Stderr,
+			TimeFormat: time.RFC3339,
+			FormatCaller: func(i interface{}) string {
+				return filepath.Base(fmt.Sprintf("%s", i))
+			},
+		})
 	}
-
-	l, err := cfg.Build()
-	if err != nil {
-		panic(err)
-	}
-
-	logger = l.Sugar().With("app", appName)
-	defer logger.Sync() //nolint:errcheck
 }
