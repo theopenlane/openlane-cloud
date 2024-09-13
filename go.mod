@@ -25,7 +25,7 @@ require (
 	github.com/theopenlane/beacon v0.1.0
 	github.com/theopenlane/core v0.1.9
 	github.com/theopenlane/echo-prometheus v0.1.0
-	github.com/theopenlane/echox v0.1.0
+	github.com/theopenlane/echox v0.2.0
 	github.com/theopenlane/echozap v0.1.0
 	github.com/theopenlane/httpsling v0.2.0
 	github.com/theopenlane/iam v0.1.6
