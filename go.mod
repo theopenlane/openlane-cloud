@@ -23,7 +23,7 @@ require (
 	github.com/stoewer/go-strcase v1.3.0
 	github.com/stretchr/testify v1.9.0
 	github.com/theopenlane/beacon v0.1.0
-	github.com/theopenlane/core v0.1.9
+	github.com/theopenlane/core v0.1.10
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.1.0
 	github.com/theopenlane/echozap v0.1.0
