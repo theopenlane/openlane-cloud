@@ -1,21 +1,20 @@
 package serveropts
 
 import (
+	"github.com/rs/zerolog/log"
 	echoprometheus "github.com/theopenlane/echo-prometheus"
 	echo "github.com/theopenlane/echox"
 	"github.com/theopenlane/echox/middleware"
-	"github.com/theopenlane/echozap"
-	"go.uber.org/zap"
 
 	"github.com/theopenlane/openlane-cloud/internal/httpserve/config"
 
 	"github.com/theopenlane/core/pkg/middleware/cachecontrol"
 	"github.com/theopenlane/core/pkg/middleware/cors"
-	"github.com/theopenlane/core/pkg/middleware/echocontext"
 	"github.com/theopenlane/core/pkg/middleware/mime"
 	"github.com/theopenlane/core/pkg/middleware/ratelimit"
 	"github.com/theopenlane/core/pkg/middleware/redirect"
 	"github.com/theopenlane/core/pkg/openlaneclient"
+	"github.com/theopenlane/echox/middleware/echocontext"
 )
 
 type ServerOption interface {
@@ -43,16 +42,6 @@ func WithConfigProvider(cfgProvider config.ConfigProvider) ServerOption {
 	})
 }
 
-// WithLogger supplies the logger for the server
-func WithLogger(l *zap.SugaredLogger) ServerOption {
-	return newApplyFunc(func(s *ServerOptions) {
-		// Add logger to main config
-		s.Config.Logger = l
-		// Add logger to the handlers config
-		s.Config.Handler.Logger = l
-	})
-}
-
 // WithOpenlaneClient supplies the openlane client for the server
 func WithOpenlaneClient() ServerOption {
 	return newApplyFunc(func(s *ServerOptions) {
@@ -65,7 +54,7 @@ func WithOpenlaneClient() ServerOption {
 		s.Config.Handler.OpenlaneClient, err = openlaneclient.NewWithDefaults(
 			openlaneclient.WithCredentials(creds))
 		if err != nil {
-			s.Config.Logger.Fatalw("failed to create openlane client", "error", err)
+			log.Fatal().Err(err).Msg("failed to create openlane client")
 		}
 	})
 }
@@ -100,10 +89,10 @@ func WithMiddleware() ServerOption {
 			middleware.RequestID(), // add request id
 			middleware.Recover(),   // recover server from any panic/fatal error gracefully
 			middleware.LoggerWithConfig(middleware.LoggerConfig{
-				Format: "remote_ip=${remote_ip}, method=${method}, uri=${uri}, status=${status}, session=${header:Set-Cookie}, host=${host}, referer=${referer}, user_agent=${user_agent}, route=${route}, path=${path}, auth=${header:Authorization}\n",
+				Output: log.Logger.Hook(LevelNameHook{}),
+				Format: "remote_ip=${remote_ip}, method=${method}, uri=${uri}, status=${status}, session=${header:Set-Cookie}, host=${host}, referer=${referer}, user_agent=${user_agent}, route=${route}, path=${path}",
 			}),
 			echoprometheus.MetricsMiddleware(),                                                       // add prometheus metrics
-			echozap.ZapLogger(s.Config.Logger.Desugar()),                                             // add zap logger, middleware requires the "regular" zap logger
 			echocontext.EchoContextToContextMiddleware(),                                             // adds echo context to parent
 			cors.New(s.Config.Settings.Server.CORS.AllowOrigins),                                     // add cors middleware
 			mime.NewWithConfig(mime.Config{DefaultContentType: echo.MIMEApplicationJSONCharsetUTF8}), // add mime middleware

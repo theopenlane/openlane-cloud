@@ -3,9 +3,12 @@ package cmd
 
 import (
 	"errors"
+	"fmt"
 	"os"
 	"path/filepath"
+	"runtime/debug"
 	"strings"
+	"time"
 
 	"github.com/knadh/koanf/parsers/yaml"
 	"github.com/knadh/koanf/providers/env"
@@ -13,8 +16,9 @@ import (
 	"github.com/knadh/koanf/providers/posflag"
 	"github.com/knadh/koanf/v2"
 	"github.com/mitchellh/go-homedir"
+	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
-	"go.uber.org/zap"
 )
 
 const (
@@ -24,7 +28,6 @@ const (
 var (
 	cfgFile      string
 	OutputFormat string
-	Logger       *zap.SugaredLogger
 	Config       *koanf.Koanf
 )
 
@@ -78,24 +81,40 @@ func initConfig() {
 	setupLogging()
 }
 
-// setupLogging configures the logger based on the command flags
+// setupLogging sets up the logging defaults for the application
 func setupLogging() {
-	cfg := zap.NewProductionConfig()
-	if Config.Bool("pretty") {
-		cfg = zap.NewDevelopmentConfig()
-	}
+	// setup logging with time and app name
+	log.Logger = zerolog.New(os.Stderr).
+		With().Timestamp().
+		Logger().
+		With().Str("app", appName).
+		Logger()
 
+	// set the log level
+	zerolog.SetGlobalLevel(zerolog.InfoLevel)
+
+	// set the log level to debug if the debug flag is set and add additional information
 	if Config.Bool("debug") {
-		cfg.Level = zap.NewAtomicLevelAt(zap.DebugLevel)
-	} else {
-		cfg.Level = zap.NewAtomicLevelAt(zap.InfoLevel)
+		zerolog.SetGlobalLevel(zerolog.DebugLevel)
+
+		buildInfo, _ := debug.ReadBuildInfo()
+
+		log.Logger = log.Logger.With().
+			Caller().
+			Int("pid", os.Getpid()).
+			Str("go_version", buildInfo.GoVersion).Logger()
 	}
 
-	l, err := cfg.Build()
-	cobra.CheckErr(err)
-
-	Logger = l.Sugar().With("app", appName)
-	defer Logger.Sync() //nolint:errcheck
+	// pretty logging for development
+	if Config.Bool("pretty") {
+		log.Logger = log.Output(zerolog.ConsoleWriter{
+			Out:        os.Stderr,
+			TimeFormat: time.RFC3339,
+			FormatCaller: func(i interface{}) string {
+				return filepath.Base(fmt.Sprintf("%s", i))
+			},
+		})
+	}
 }
 
 // initConfiguration loads the configuration from the command flags of the given cobra command

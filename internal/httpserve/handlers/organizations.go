@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/rs/zerolog/log"
 	"github.com/theopenlane/core/pkg/openlaneclient"
 	echo "github.com/theopenlane/echox"
 	"github.com/theopenlane/utils/rout"
@@ -29,12 +30,11 @@ func (h *Handler) OrganizationHandler(ctx echo.Context) error {
 		return h.InvalidInput(ctx, err)
 	}
 
-	h.Logger.Debugw("creating organization",
-		"name", in.Name,
-		"environments", in.Environments,
-		"buckets", in.Buckets,
-		"relationships", in.Relationships,
-	)
+	log.Debug().Str("name", in.Name).
+		Strs("environments", in.Environments).
+		Strs("buckets", in.Buckets).
+		Strs("relationships", in.Relationships).
+		Msg("creating organization")
 
 	// create root organization
 	rootOrgName := in.Name
@@ -145,7 +145,7 @@ func (h *Handler) createChildOrganizations(ctx context.Context, namePrefix, pare
 	var orgs []openlaneclient.CreateOrganization_CreateOrganization_Organization
 
 	for _, childName := range childNames {
-		h.Logger.Debugw("creating child organization", "childName", childName)
+		log.Debug().Str("childName", childName).Msg("creating child organization")
 
 		orgName := childName
 
