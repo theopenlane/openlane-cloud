@@ -2,6 +2,7 @@
 [![Build status](https://badge.buildkite.com/9d99bb1f92d9195776d9983bea1f74314fd912706244c48863.svg)](https://buildkite.com/theopenlane/theopenlane-cloud)
 [![Go Reference](https://pkg.go.dev/badge/github.com/theopenlane/openlane-cloud.svg)](https://pkg.go.dev/github.com/theopenlane/openlane-cloud)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache2.0-brightgreen.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=theopenlane_openlane-cloud&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=theopenlane_openlane-cloud)
 
 # Openlane Cloud
 
@@ -141,25 +142,4 @@ Seeded Environment Created:
 
 ## Contributing
 
-Please read the [contributing](.github/CONTRIBUTING.md) guide as well as the [Developer Certificate of Origin](https://developercertificate.org/). You will be required to sign all commits to the Openlane project, so if you're unfamiliar with how to set that up, see [github's documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification).
-
-## Licensing
-
-This repository contains `openlane-cloud` which is open source software under [Apache 2.0](LICENSE). Openlane is a product produced from this open source software exclusively by theopenlane, Inc. This product is produced under our published commercial terms (which are subject to change), and any logos or trademarks in this repository or the broader [theopenlane](https://github.com/theopenlane) organization are not covered under the Apache License.
-
-Others are allowed to make their own distribution of this software or include this software in other commercial offerings, but cannot use any of the Openlane logos, trademarks, cloud services, etc.
-
-## Security
-
-We take the security of our software products and services seriously, including all of the open source code repositories managed through our Github Organizations, such as [theopenlane](https://github.com/theopenlane). If you believe you have found a security vulnerability in any of our repositories, please report it to us through coordinated disclosure.
-
-**Please do NOT report security vulnerabilities through public github issues, discussions, or pull requests!**
-
-Instead, please send an email to `security@openlane.io` with as much information as possible to best help us understand and resolve the issues. See the security policy attached to this repository for more details.
-
-## Questions?
-
-You can email us at `info@openlane.io`, open a github issue in this repository, or reach out to [matoszz](https://github.com/matoszz) directly.
-
-
-
+See the [contributing](.github/CONTRIBUTING.md) guide for more information
