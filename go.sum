@@ -259,8 +259,8 @@ github.com/theopenlane/entx v0.2.2 h1:tUYxJQbG/W7kyCOF836GfLLB3agbdElxXV2qwlKA6L
 github.com/theopenlane/entx v0.2.2/go.mod h1:6TA516nQJ3p/Cn7QlbVouKpui2XPipj8OXb9/5iGDB8=
 github.com/theopenlane/httpsling v0.2.1 h1:fWK6emqVOv/al4TamApcf/rNHfpWmobWl5nnxJr/9/A=
 github.com/theopenlane/httpsling v0.2.1/go.mod h1:17xyZnSgSHHZISpYxqBhbztSNxz9ihZrmjyce3ShfRc=
-github.com/theopenlane/iam v0.2.0 h1:TGFk4ToN6XVKQXJvyA2cNiVQfWmDnpDD9oV2B2qJndk=
-github.com/theopenlane/iam v0.2.0/go.mod h1:8nPT57sPCoOzf5QeSbfEonDkZBTQpwIYnN8L8ibJbW8=
+github.com/theopenlane/iam v0.2.1 h1:rUUnrEIgr1up6DnF52Ayk6TVaGhBtSNiEw5rGSQPR/w=
+github.com/theopenlane/iam v0.2.1/go.mod h1:65VB58GMFay80qRTP+4USlSkTiZcisxvt7ohMHmuHnc=
 github.com/theopenlane/utils v0.3.0 h1:wLduNgi065CeRu4RvRG5p1Sz8H5S+KDiwSdSQ/Jc9Kg=
 github.com/theopenlane/utils v0.3.0/go.mod h1:ydEtwhmEvkVt3KKmNqiQiSY5b3rKH7U4umZ3QbFDsxU=
 github.com/ugorji/go/codec v1.2.12 h1:9LC83zGrHhuUA9l16C9AHXAqEV/2wBQ4nkvumAE65EE=
@@ -337,8 +337,8 @@ google.golang.org/genproto/googleapis/api v0.0.0-20240903143218-8af14fe29dc1 h1:
 google.golang.org/genproto/googleapis/api v0.0.0-20240903143218-8af14fe29dc1/go.mod h1:qpvKtACPCQhAdu3PyQgV4l3LMXZEtft7y8QcarRsp9I=
 google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1 h1:pPJltXNxVzT4pK9yD8vR9X75DaWYYmLGMsEvBfFQZzQ=
 google.golang.org/genproto/googleapis/rpc v0.0.0-20240903143218-8af14fe29dc1/go.mod h1:UqMtugtsSgubUsoxbuAoiCXvqvErP7Gf0so0mK9tHxU=
-google.golang.org/grpc v1.66.1 h1:hO5qAXR19+/Z44hmvIM4dQFMSYX9XcWsByfoxutBpAM=
-google.golang.org/grpc v1.66.1/go.mod h1:s3/l6xSSCURdVfAnL+TqCNMyTDAGN6+lZeVxnZR128Y=
+google.golang.org/grpc v1.67.0 h1:IdH9y6PF5MPSdAntIcpjQ+tXO41pcQsfZV2RxtQgVcw=
+google.golang.org/grpc v1.67.0/go.mod h1:1gLDyUQU7CTLJI90u3nXZ9ekeghjeM7pTDZlqFNg2AA=
 google.golang.org/protobuf v1.34.2 h1:6xV6lTsCfpGD21XK49h7MhtcApnLqkfYgPcdHftf6hg=
 google.golang.org/protobuf v1.34.2/go.mod h1:qYOHts0dSfpeUzUFpOMr/WGzszTmLH+DiWniOlNbLDw=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
