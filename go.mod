@@ -31,7 +31,7 @@ require (
 	github.com/theopenlane/iam v0.2.1
 	github.com/theopenlane/utils v0.3.0
 	golang.org/x/crypto v0.27.0
-	golang.org/x/text v0.18.0
+	golang.org/x/text v0.19.0
 )
 
 require (
