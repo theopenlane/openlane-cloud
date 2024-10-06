@@ -5,7 +5,7 @@ go 1.23.1
 require (
 	github.com/99designs/gqlgen v0.17.55
 	github.com/brianvoe/gofakeit/v7 v7.0.4
-	github.com/getkin/kin-openapi v0.127.0
+	github.com/getkin/kin-openapi v0.128.0
 	github.com/invopop/jsonschema v0.12.0
 	github.com/invopop/yaml v0.3.1
 	github.com/jedib0t/go-pretty/v6 v6.6.0
