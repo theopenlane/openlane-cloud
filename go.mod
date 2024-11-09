@@ -3,7 +3,7 @@ module github.com/theopenlane/openlane-cloud
 go 1.23.2
 
 require (
-	github.com/99designs/gqlgen v0.17.55
+	github.com/99designs/gqlgen v0.17.56
 	github.com/brianvoe/gofakeit/v7 v7.1.2
 	github.com/getkin/kin-openapi v0.128.0
 	github.com/invopop/jsonschema v0.12.0
