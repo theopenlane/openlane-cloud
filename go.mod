@@ -28,7 +28,7 @@ require (
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.2.0
 	github.com/theopenlane/httpsling v0.2.1
-	github.com/theopenlane/iam v0.2.4
+	github.com/theopenlane/iam v0.3.1
 	github.com/theopenlane/utils v0.3.0
 	golang.org/x/crypto v0.29.0
 	golang.org/x/text v0.20.0
@@ -135,7 +135,7 @@ require (
 	google.golang.org/genproto/googleapis/api v0.0.0-20241021214115-324edc3d5d38 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20241021214115-324edc3d5d38 // indirect
 	google.golang.org/grpc v1.67.1 // indirect
-	google.golang.org/protobuf v1.35.1 // indirect
+	google.golang.org/protobuf v1.35.2 // indirect
 	gopkg.in/VividCortex/ewma.v1 v1.1.1 // indirect
 	gopkg.in/cheggaaa/pb.v2 v2.0.7 // indirect
 	gopkg.in/fatih/color.v1 v1.7.0 // indirect
