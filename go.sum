@@ -269,8 +269,8 @@ github.com/theopenlane/httpsling v0.2.1 h1:fWK6emqVOv/al4TamApcf/rNHfpWmobWl5nnx
 github.com/theopenlane/httpsling v0.2.1/go.mod h1:17xyZnSgSHHZISpYxqBhbztSNxz9ihZrmjyce3ShfRc=
 github.com/theopenlane/iam v0.3.2 h1:oNryhygt0XJX01NNwXesXd7c9/vyQkL+1ZNH2wYXGCQ=
 github.com/theopenlane/iam v0.3.2/go.mod h1:RXQ18mL2SbN/4sM2h7/ljl7Zm+oD8HZJzhITQa4y4AY=
-github.com/theopenlane/utils v0.3.1 h1:CCRre2rpuj35Qij2hWgro0Urg94KJq6aAo2pdaWkziI=
-github.com/theopenlane/utils v0.3.1/go.mod h1:sAvism3Vv8pb0kRj2lYQBYUaAKKRJSwULYoQzzLTTJw=
+github.com/theopenlane/utils v0.4.0 h1:k0DNZFjp1hpwfqObwXb2XgaO0jJ6ULJuJH06c9Ekquk=
+github.com/theopenlane/utils v0.4.0/go.mod h1:sAvism3Vv8pb0kRj2lYQBYUaAKKRJSwULYoQzzLTTJw=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
 github.com/ugorji/go/codec v1.2.7/go.mod h1:WGN1fab3R1fzQlVQTkfxVtIBhWDRqOviHU95kRgeqEY=
 github.com/valyala/bytebufferpool v1.0.0 h1:GqA5TC/0021Y/b9FG4Oi9Mr3q7XYx6KllzawFIhcdPw=
