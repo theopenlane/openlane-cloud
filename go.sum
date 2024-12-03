@@ -8,8 +8,8 @@ github.com/99designs/gqlgen v0.17.57 h1:Ak4p60BRq6QibxY0lEc0JnQhDurfhxA67sp02lMj
 github.com/99designs/gqlgen v0.17.57/go.mod h1:Jx61hzOSTcR4VJy/HFIgXiQ5rJ0Ypw8DxWLjbYDAUw0=
 github.com/DATA-DOG/go-sqlmock v1.5.0 h1:Shsta01QNfFxHCfpW6YH2STWB0MudeXXEWMr20OEh60=
 github.com/DATA-DOG/go-sqlmock v1.5.0/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
-github.com/Yamashou/gqlgenc v0.26.2 h1:hrGfuNFBZn9ie/rgDtc9YmzfIurHBtCEvuy9aHDomHI=
-github.com/Yamashou/gqlgenc v0.26.2/go.mod h1:o3fqXA5pNUzs2PWcA4KNpsBOqP7VMMW+g8UQBbBTm6s=
+github.com/Yamashou/gqlgenc v0.27.2 h1:GBmGpepw6I5fPumpogj++O/PiYEICEpaaUeRIPJNiig=
+github.com/Yamashou/gqlgenc v0.27.2/go.mod h1:o3fqXA5pNUzs2PWcA4KNpsBOqP7VMMW+g8UQBbBTm6s=
 github.com/agext/levenshtein v1.2.3 h1:YB2fHEn0UJagG8T1rrWknE3ZQzWM06O8AMAatNn7lmo=
 github.com/agext/levenshtein v1.2.3/go.mod h1:JEDfjyjHDjOF/1e4FlBE/PkbqA9OfWu2ki2W0IB5558=
 github.com/agnivade/levenshtein v1.1.1 h1:QY8M92nrzkmr798gCo3kmMyqXFzdQVpxLlGPRBij0P8=
@@ -267,8 +267,8 @@ github.com/theopenlane/entx v0.2.3 h1:WP4hmWNHc/vNWzBXKIiophLs5zJ37HQfe5ZlbxLjPA
 github.com/theopenlane/entx v0.2.3/go.mod h1:HbxQl8QD2oby9HNKzFbdJ4PzS0kTHKpRGq5mw1dYTx4=
 github.com/theopenlane/httpsling v0.2.1 h1:fWK6emqVOv/al4TamApcf/rNHfpWmobWl5nnxJr/9/A=
 github.com/theopenlane/httpsling v0.2.1/go.mod h1:17xyZnSgSHHZISpYxqBhbztSNxz9ihZrmjyce3ShfRc=
-github.com/theopenlane/iam v0.3.5 h1:QOwBUyTblLkuq8ErubSlvnMK/dwmMAWEyIq5f2Z6YWk=
-github.com/theopenlane/iam v0.3.5/go.mod h1:tzciSwgZp19Ja5KBE6F28JJm2VQE+nH5mBd9N6eZHYM=
+github.com/theopenlane/iam v0.4.0 h1:RKtmb7PRPg/TcSgM0SK4PosGc9hPf+mTvSeltKFYeBI=
+github.com/theopenlane/iam v0.4.0/go.mod h1:eBQEEZNMbjtMWHfACu0pXQMCx5nvlGdu26MYoSDc8NY=
 github.com/theopenlane/utils v0.4.0 h1:k0DNZFjp1hpwfqObwXb2XgaO0jJ6ULJuJH06c9Ekquk=
 github.com/theopenlane/utils v0.4.0/go.mod h1:sAvism3Vv8pb0kRj2lYQBYUaAKKRJSwULYoQzzLTTJw=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=

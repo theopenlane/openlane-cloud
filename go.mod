@@ -28,7 +28,7 @@ require (
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.2.0
 	github.com/theopenlane/httpsling v0.2.1
-	github.com/theopenlane/iam v0.3.5
+	github.com/theopenlane/iam v0.4.0
 	github.com/theopenlane/utils v0.4.0
 	golang.org/x/crypto v0.29.0
 	golang.org/x/text v0.20.0
@@ -38,7 +38,7 @@ require (
 	ariga.io/atlas v0.27.0 // indirect
 	entgo.io/contrib v0.6.0 // indirect
 	entgo.io/ent v0.14.1 // indirect
-	github.com/Yamashou/gqlgenc v0.26.2 // indirect
+	github.com/Yamashou/gqlgenc v0.27.2 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
