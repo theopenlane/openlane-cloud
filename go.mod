@@ -30,7 +30,7 @@ require (
 	github.com/theopenlane/httpsling v0.2.1
 	github.com/theopenlane/iam v0.4.3
 	github.com/theopenlane/utils v0.4.2
-	golang.org/x/crypto v0.30.0
+	golang.org/x/crypto v0.31.0
 	golang.org/x/text v0.21.0
 )
 
