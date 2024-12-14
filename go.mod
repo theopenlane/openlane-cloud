@@ -27,7 +27,7 @@ require (
 	github.com/theopenlane/core v0.6.0
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.2.0
-	github.com/theopenlane/httpsling v0.2.1
+	github.com/theopenlane/httpsling v0.2.2
 	github.com/theopenlane/iam v0.5.0
 	github.com/theopenlane/utils v0.4.2
 	golang.org/x/crypto v0.31.0
