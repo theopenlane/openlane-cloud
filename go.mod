@@ -8,7 +8,7 @@ require (
 	github.com/getkin/kin-openapi v0.128.0
 	github.com/invopop/jsonschema v0.12.0
 	github.com/invopop/yaml v0.3.1
-	github.com/jedib0t/go-pretty/v6 v6.6.4
+	github.com/jedib0t/go-pretty/v6 v6.6.5
 	github.com/knadh/koanf/parsers/yaml v0.1.0
 	github.com/knadh/koanf/providers/env v1.0.0
 	github.com/knadh/koanf/providers/file v1.1.2
