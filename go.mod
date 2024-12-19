@@ -26,7 +26,7 @@ require (
 	github.com/theopenlane/beacon v0.1.1
 	github.com/theopenlane/core v0.6.1
 	github.com/theopenlane/echo-prometheus v0.1.0
-	github.com/theopenlane/echox v0.2.0
+	github.com/theopenlane/echox v0.2.1
 	github.com/theopenlane/httpsling v0.2.2
 	github.com/theopenlane/iam v0.5.0
 	github.com/theopenlane/utils v0.4.2
@@ -126,7 +126,7 @@ require (
 	go.opentelemetry.io/proto/otlp v1.4.0 // indirect
 	golang.org/x/exp v0.0.0-20241210194714-1829a127f884 // indirect
 	golang.org/x/mod v0.22.0 // indirect
-	golang.org/x/net v0.32.0 // indirect
+	golang.org/x/net v0.33.0 // indirect
 	golang.org/x/oauth2 v0.24.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
