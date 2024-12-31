@@ -6,7 +6,7 @@ require (
 	github.com/99designs/gqlgen v0.17.61
 	github.com/brianvoe/gofakeit/v7 v7.1.2
 	github.com/getkin/kin-openapi v0.128.0
-	github.com/invopop/jsonschema v0.12.0
+	github.com/invopop/jsonschema v0.13.0
 	github.com/invopop/yaml v0.3.1
 	github.com/jedib0t/go-pretty/v6 v6.6.5
 	github.com/knadh/koanf/parsers/yaml v0.1.0
