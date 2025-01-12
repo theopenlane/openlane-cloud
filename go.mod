@@ -1,6 +1,6 @@
 module github.com/theopenlane/openlane-cloud
 
-go 1.23.3
+go 1.23.4
 
 require (
 	github.com/99designs/gqlgen v0.17.62
