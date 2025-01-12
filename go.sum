@@ -259,8 +259,8 @@ github.com/stretchr/testify v1.10.0 h1:Xv5erBjTwe/5IxqUQTdXv5kgmIvbHo3QQyRwhJsOf
 github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 github.com/theopenlane/beacon v0.1.1 h1:68a5Hg0vYMJMBzY9NEXt8rLDpnZrgl7VKaNsvHubaMQ=
 github.com/theopenlane/beacon v0.1.1/go.mod h1:sDcVNfCL7XpLuZ2Gq5Fy1h87mcZbtEGPiDur7r0R0bA=
-github.com/theopenlane/core v0.6.5 h1:f5sCP6fG3rgFY6HRezQV62zp+i60Ip3wnY8h54iyScQ=
-github.com/theopenlane/core v0.6.5/go.mod h1:eJwvX7zq9VCd6NSv8fCEQdG5kUWq2b48K/xnNvUz/Fk=
+github.com/theopenlane/core v0.6.7 h1:vvQabM6Fm9eelTfkB5fWh9RgO2ZieIwcMnGVVXPuLMw=
+github.com/theopenlane/core v0.6.7/go.mod h1:2jKP6usI/2zvU17sLxCPiRN8f/97furypfbjNi1s6J0=
 github.com/theopenlane/echo-prometheus v0.1.0 h1:1zMejBVHe5w4zLHS+k5FV9S/46QBiwO6ggTSKi6r/7E=
 github.com/theopenlane/echo-prometheus v0.1.0/go.mod h1:Eiiv1ZLXKMsteQ3T+H1tFfSSZuXSvQfZp95qr5hmGkA=
 github.com/theopenlane/echox v0.2.1 h1:ZhVkimmWxpKITf67oM57SrLWeIdnV8+dNXlC+VzlRaQ=
