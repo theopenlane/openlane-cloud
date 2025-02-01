@@ -28,7 +28,7 @@ require (
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.2.1
 	github.com/theopenlane/httpsling v0.2.2
-	github.com/theopenlane/iam v0.7.4
+	github.com/theopenlane/iam v0.7.5
 	github.com/theopenlane/utils v0.4.3
 	golang.org/x/crypto v0.32.0
 	golang.org/x/text v0.21.0
@@ -39,7 +39,7 @@ require (
 	entgo.io/contrib v0.6.0 // indirect
 	entgo.io/ent v0.14.1 // indirect
 	github.com/XSAM/otelsql v0.36.0 // indirect
-	github.com/Yamashou/gqlgenc v0.30.2 // indirect
+	github.com/Yamashou/gqlgenc v0.30.3 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/agnivade/levenshtein v1.2.0 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
@@ -137,8 +137,8 @@ require (
 	golang.org/x/time v0.9.0 // indirect
 	golang.org/x/tools v0.29.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250102185135-69823020774d // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250106144421-5f5ef82da422 // indirect
-	google.golang.org/grpc v1.69.4 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20250124145028-65684f501c47 // indirect
+	google.golang.org/grpc v1.70.0 // indirect
 	google.golang.org/protobuf v1.36.4 // indirect
 	gopkg.in/VividCortex/ewma.v1 v1.1.1 // indirect
 	gopkg.in/cheggaaa/pb.v2 v2.0.7 // indirect
