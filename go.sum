@@ -276,8 +276,8 @@ github.com/theopenlane/entx v0.4.3 h1:b2152JjZrlJo+a8tIXoKX5S03SXZKfFPSauweqfD+4
 github.com/theopenlane/entx v0.4.3/go.mod h1:JUOYxrHm5giZXo6ja4aGzpeSKN4em78Ub5hXqnxPYhY=
 github.com/theopenlane/httpsling v0.2.2 h1:QqJo/VsjeiM6/RnWZpRQX3I7T62j5u9WdXo52zUWyi0=
 github.com/theopenlane/httpsling v0.2.2/go.mod h1:mrSaIZs4lhcBsOJCv/n67N7eDZ/skD6vA8l8y9MDrKk=
-github.com/theopenlane/iam v0.8.0 h1:zQkTDNFae2ACh5CspOamB0qSbmJoMAYjHy81PGGXwH8=
-github.com/theopenlane/iam v0.8.0/go.mod h1:JqdjhoLT3MUa7FrZvFf8p8qGhdK8RRCn0B9EXSWgdB4=
+github.com/theopenlane/iam v0.8.1 h1:KaUtQT1qHO8tzvi1+U5COnevF90UQtLndxDsCDHS2mI=
+github.com/theopenlane/iam v0.8.1/go.mod h1:qsecwlRn0gxbE8Ygkqjq2ryIhTGiRys7JXoXi8vwz8w=
 github.com/theopenlane/utils v0.4.3 h1:0ZSqUzbbQt7lczLTIXlbYXOwLuKuQns//L2AHQOZdis=
 github.com/theopenlane/utils v0.4.3/go.mod h1:UTzPMpvyCu35eGium50H7KroHU0+2mh1lMOYTb4Vi70=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
