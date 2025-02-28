@@ -53,7 +53,7 @@ func (h *Handler) OrganizationHandler(ctx echo.Context) error {
 		}
 	}
 
-	ws, err := h.OpenlaneClient.CreateOrganization(ctx.Request().Context(), input)
+	ws, err := h.OpenlaneClient.CreateOrganization(ctx.Request().Context(), input, nil)
 	if err != nil {
 		return h.BadRequest(ctx, err)
 	}
@@ -157,7 +157,7 @@ func (h *Handler) createChildOrganizations(ctx context.Context, namePrefix, pare
 		}
 
 		// create child organization
-		o, err := h.OpenlaneClient.CreateOrganization(ctx, input)
+		o, err := h.OpenlaneClient.CreateOrganization(ctx, input, nil)
 		if err != nil {
 			return nil, err
 		}
