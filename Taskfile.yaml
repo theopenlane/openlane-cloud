@@ -140,7 +140,7 @@ tasks:
     desc: a task to create a personal access token and export it to the environment
     vars:
       PERSONAL_ORG:
-        sh: openlane  user get -z json | jq -r '.users.edges.[0].node.setting.defaultOrg.id'
+        sh: openlane  user get -z json | jq -r '.self.setting.defaultOrg.id'
     cmds:
       - touch {{.PAT_FILE}}
       - openlane pat create --name="openlane-cloud-demo-env" --description="openlane-cloud" -o {{.PERSONAL_ORG}}  -z json | jq -r '"OPENLANECLOUD_PATID=\(.createPersonalAccessToken.personalAccessToken.id)\nOPENLANECLOUD_SERVER_OPENLANE_TOKEN=\(.createPersonalAccessToken.personalAccessToken.token)\nOPENLANECLOUD_TOKEN=\(.createPersonalAccessToken.personalAccessToken.token)"' > {{.PAT_FILE}}
