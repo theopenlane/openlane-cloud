@@ -60,7 +60,7 @@ func (c *Config) generateGroupData() error {
 func generateGroupNames(num int) []string {
 	groups := []string{}
 	for i := 0; i < num; i++ {
-		groups = append(groups, cases.Title(language.English, cases.Compact).String(gofakeit.Adjective()))
+		groups = append(groups, cases.Title(language.English, cases.Compact).String(gofakeit.Adjective()+" "+gofakeit.Noun()))
 	}
 
 	// dedupe the groups

@@ -3,7 +3,6 @@ package seed
 import (
 	"context"
 	"fmt"
-	"time"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/schollz/progressbar/v3"
@@ -32,11 +31,6 @@ func init() {
 }
 
 func initOrgMemberData(ctx context.Context) error {
-	patID := cmd.Config.String("patid")
-	if patID == "" {
-		cobra.CheckErr("PAT ID not provided")
-	}
-
 	orgID := cmd.Config.String("organization-id")
 	if orgID == "" {
 		cobra.CheckErr("Organization ID not provided")
@@ -76,18 +70,6 @@ func initOrgMemberData(ctx context.Context) error {
 	cmd.BarAdd(bar, 10) //nolint:mnd
 
 	userIDs, err := c.RegisterUsers(ctx)
-	cobra.CheckErr(err)
-
-	err = c.AuthorizeOrganizationOnPAT(ctx, orgID, patID)
-	cobra.CheckErr(err)
-
-	// wait for the cache to update (1s)
-	// otherwise the user will not be able to see the org
-	time.Sleep(2 * time.Second) //nolint:mnd
-	cmd.BarAdd(bar, 10)         //nolint:mnd
-
-	// create API Token for the root org and authorize as that token
-	err = c.GenerateSeedAPIToken(ctx, orgID)
 	cobra.CheckErr(err)
 
 	bar.Describe("[light_green]>[reset] creating org members...")

@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"time"
 
 	"github.com/jedib0t/go-pretty/v6/table"
 	"github.com/schollz/progressbar/v3"
@@ -35,11 +34,6 @@ func init() {
 }
 
 func initSeedData(ctx context.Context) error {
-	patID := cmd.Config.String("patid")
-	if patID == "" {
-		cobra.CheckErr("PAT ID not provided")
-	}
-
 	c, err := newSeedClient()
 	cobra.CheckErr(err)
 
@@ -65,36 +59,7 @@ func initSeedData(ctx context.Context) error {
 	userIDs, err := c.RegisterUsers(ctx)
 	cobra.CheckErr(err)
 
-	bar.Describe("[light_green]>[reset] creating organizations...")
-	cmd.BarAdd(bar, 10) //nolint:mnd
-
-	rootOrgID, err := c.LoadOrganizations(ctx)
-	cobra.CheckErr(err)
-
-	if rootOrgID == "" {
-		err := bar.Exit()
-		cobra.CheckErr(err)
-
-		// if the root org is not found, exit and return error
-		cobra.CheckErr("root org not found")
-	}
-
-	// authorize the root org
-	cmd.BarAdd(bar, 10) //nolint:mnd
-
-	err = c.AuthorizeOrganizationOnPAT(ctx, rootOrgID, patID)
-	cobra.CheckErr(err)
-
-	// wait for the cache to update (1s)
-	// otherwise the user will not be able to see the org
-	time.Sleep(2 * time.Second) //nolint:mnd
-	cmd.BarAdd(bar, 10)         //nolint:mnd
-
-	// create API Token for the root org and authorize as that token
-	err = c.GenerateSeedAPIToken(ctx, rootOrgID)
-	cobra.CheckErr(err)
-
-	bar.Describe("[light_green]>[reset] creating adding org members...")
+	bar.Describe("[light_green]>[reset] adding org members...")
 	cmd.BarAdd(bar, 10) //nolint:mnd
 
 	err = c.LoadOrgMembers(ctx, userIDs)

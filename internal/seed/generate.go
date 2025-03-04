@@ -11,11 +11,6 @@ func (c *Config) GenerateData() error {
 		}
 	}
 
-	// Generate the organization data
-	if err := c.generateOrgData(); err != nil {
-		return err
-	}
-
 	// Generate the group data
 	if err := c.generateGroupData(); err != nil {
 		return err

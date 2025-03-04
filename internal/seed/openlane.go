@@ -112,28 +112,6 @@ func (c *Client) GenerateSeedAPIToken(ctx context.Context, orgID string) error {
 	return nil
 }
 
-// LoadOrganizations loads the organizations from the organizations.csv file
-func (c *Client) LoadOrganizations(ctx context.Context) (string, error) {
-	file := c.config.getOrgFilePath()
-
-	upload, err := loadCSVFile(file)
-	if err != nil {
-		return "", err
-	}
-
-	org, err := c.CreateBulkCSVOrganization(ctx, upload)
-	if err != nil {
-		return "", err
-	}
-
-	// get the first org, this is the root org
-	if len(org.CreateBulkCSVOrganization.Organizations) > 0 {
-		return org.CreateBulkCSVOrganization.Organizations[0].ID, nil
-	}
-
-	return "", nil
-}
-
 // LoadGroups loads the groups from the groups.csv file
 func (c *Client) LoadGroups(ctx context.Context) error {
 	file := c.config.getGroupFilePath()
