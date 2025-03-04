@@ -30,7 +30,9 @@ tasks:
     desc: runs all tasks to create a new seeded environment
     cmds:
       - task: :login
-      - task: :pat:create
+      - task: :org:create
+      - task: :token:create
+      - export $(awk -F= '{output=output" "$1"="$2} END {print output}' {{.PAT_FILE}})
       - task: seed
 
   organization:create:

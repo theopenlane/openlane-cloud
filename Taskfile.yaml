@@ -146,6 +146,18 @@ tasks:
       - openlane pat create --name="openlane-cloud-demo-env" --description="openlane-cloud" -o {{.PERSONAL_ORG}}  -z json | jq -r '"OPENLANECLOUD_PATID=\(.createPersonalAccessToken.personalAccessToken.id)\nOPENLANECLOUD_SERVER_OPENLANE_TOKEN=\(.createPersonalAccessToken.personalAccessToken.token)\nOPENLANECLOUD_TOKEN=\(.createPersonalAccessToken.personalAccessToken.token)"' > {{.PAT_FILE}}
       - export $(awk -F= '{output=output" "$1"="$2} END {print output}' {{.PAT_FILE}})
 
+  token:create:
+    desc: a task to create a personal access token and export it to the environment'
+    cmds:
+      - touch {{.PAT_FILE}}
+      - openlane token create --name="openlane-cloud-demo-env"  --scopes=read,write -z json | jq -r '"OPENLANECLOUD_TOKEN=\(.createAPIToken.apiToken.token)"' > {{.PAT_FILE}}
+      - export $(awk -F= '{output=output" "$1"="$2} END {print output}' {{.PAT_FILE}})
+
+  org:create:
+    desc: a task to create a new organization
+    cmds:
+      - openlane org create --name="demo-org-$(date +%s)" -z json | jq -r '.createOrganization.organization.id'
+
   ## Server tasks
   setup-dev:
     desc: login and create an openlane pat for the dev environment
