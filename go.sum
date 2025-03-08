@@ -278,8 +278,8 @@ github.com/theopenlane/entx v0.4.4 h1:5aBqehvCqK7cFPp0ddcPtYPjYG36KXFQgFkUa/0L71
 github.com/theopenlane/entx v0.4.4/go.mod h1:dirqWv2mSxQcQg0j+pGJlr0YOsju6NdtxQrYG/Qd0W8=
 github.com/theopenlane/httpsling v0.2.2 h1:QqJo/VsjeiM6/RnWZpRQX3I7T62j5u9WdXo52zUWyi0=
 github.com/theopenlane/httpsling v0.2.2/go.mod h1:mrSaIZs4lhcBsOJCv/n67N7eDZ/skD6vA8l8y9MDrKk=
-github.com/theopenlane/iam v0.8.6 h1:JZj07xVyMEjHLMku+SXFIdt/XMPLBRmDMR1tw8G9fMU=
-github.com/theopenlane/iam v0.8.6/go.mod h1:yRFJuRr9R6fk2ZRbiIJRGQwDYyncS7n6O2VcUdHM1gk=
+github.com/theopenlane/iam v0.9.1 h1:k2wK5L/o65fQgaNVbOs7KhEXSXR/nlkqBXBd2U0Zf78=
+github.com/theopenlane/iam v0.9.1/go.mod h1:7ds9fTFzTYho7j5rgwVfKWFAhPiWDdPxrjPTmcI6oO4=
 github.com/theopenlane/utils v0.4.3 h1:0ZSqUzbbQt7lczLTIXlbYXOwLuKuQns//L2AHQOZdis=
 github.com/theopenlane/utils v0.4.3/go.mod h1:UTzPMpvyCu35eGium50H7KroHU0+2mh1lMOYTb4Vi70=
 github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
@@ -360,8 +360,8 @@ golang.org/x/tools v0.31.0/go.mod h1:naFTU+Cev749tSJRXJlna0T3WxKvb1kWEx15xA4SdmQ
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 google.golang.org/genproto/googleapis/api v0.0.0-20250204164813-702378808489 h1:fCuMM4fowGzigT89NCIsW57Pk9k2D12MMi2ODn+Nk+o=
 google.golang.org/genproto/googleapis/api v0.0.0-20250204164813-702378808489/go.mod h1:iYONQfRdizDB8JJBybql13nArx91jcUk7zCXEsOofM4=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20250219182151-9fdb1cabc7b2 h1:DMTIbak9GhdaSxEjvVzAeNZvyc03I61duqNbnm3SU0M=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20250219182151-9fdb1cabc7b2/go.mod h1:LuRYeWDFV6WOn90g357N17oMCaxpgCnbi/44qJvDn2I=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20250227231956-55c901821b1e h1:YA5lmSs3zc/5w+xsRcHqpETkaYyK63ivEPzNTcUUlSA=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20250227231956-55c901821b1e/go.mod h1:LuRYeWDFV6WOn90g357N17oMCaxpgCnbi/44qJvDn2I=
 google.golang.org/grpc v1.70.0 h1:pWFv03aZoHzlRKHWicjsZytKAiYCtNS0dHbXnIdq7jQ=
 google.golang.org/grpc v1.70.0/go.mod h1:ofIJqVKDXx/JiXrwr2IG4/zwdH9txy3IlF40RmcJSQw=
 google.golang.org/protobuf v1.36.5 h1:tPhr+woSbjfYvY6/GPufUoYizxw1cF/yFoxJ2fmpwlM=
