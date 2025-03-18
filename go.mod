@@ -29,7 +29,7 @@ require (
 	github.com/theopenlane/echox v0.2.1
 	github.com/theopenlane/httpsling v0.2.2
 	github.com/theopenlane/iam v0.9.1
-	github.com/theopenlane/utils v0.4.3
+	github.com/theopenlane/utils v0.4.4
 	golang.org/x/crypto v0.36.0
 	golang.org/x/text v0.23.0
 )
@@ -37,7 +37,7 @@ require (
 require (
 	ariga.io/atlas v0.31.1-0.20250212144724-069be8033e83 // indirect
 	entgo.io/contrib v0.6.0 // indirect
-	entgo.io/ent v0.14.3 // indirect
+	entgo.io/ent v0.14.4 // indirect
 	github.com/XSAM/otelsql v0.37.0 // indirect
 	github.com/Yamashou/gqlgenc v0.31.0 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
