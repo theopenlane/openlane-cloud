@@ -2,6 +2,7 @@ package seed
 
 import (
 	"embed"
+	"encoding/json"
 	"fmt"
 	"io/fs"
 	"strings"
@@ -25,7 +26,7 @@ type Template struct {
 	// Name is the name of the template
 	Name string
 	// JSONConfig is the JSONschema configuration for the template
-	JSONConfig []byte
+	JSONConfig map[string]any
 }
 
 // getTemplates gets all the templates from the jsonschema directory
@@ -44,6 +45,13 @@ func getTemplates(dir string) (templates []Template, err error) {
 			return err
 		}
 
+		var schemaOut map[string]any
+
+		err = json.Unmarshal(schema, &schemaOut)
+		if err != nil {
+			return err
+		}
+
 		nameSplit := strings.Split(d.Name(), ".")
 
 		if len(nameSplit) != templateNameNumParts {
@@ -52,7 +60,7 @@ func getTemplates(dir string) (templates []Template, err error) {
 
 		templates = append(templates, Template{
 			Name:       nameSplit[1],
-			JSONConfig: schema,
+			JSONConfig: schemaOut,
 		})
 
 		return nil
