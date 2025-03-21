@@ -20,7 +20,20 @@ func TestGetTemplates(t *testing.T) {
 	for _, template := range templates {
 		assert.NotEmpty(t, template.Name)
 		assert.NotEmpty(t, template.JSONConfig)
-		assert.Contains(t, string(template.JSONConfig), "https://json-schema.org/draft/2020-12/schema")
+
+		foundValidSchema := false
+
+		for key, value := range template.JSONConfig {
+			if key == "$schema" {
+				foundValidSchema = true
+
+				assert.Equal(t, "https://json-schema.org/draft/2020-12/schema", value)
+
+				break
+			}
+		}
+
+		assert.True(t, foundValidSchema)
 	}
 
 	// Call the function being tested, but include an invalid directory
