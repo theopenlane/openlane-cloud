@@ -26,7 +26,7 @@ require (
 	github.com/theopenlane/beacon v0.1.1
 	github.com/theopenlane/core v0.8.2
 	github.com/theopenlane/echo-prometheus v0.1.0
-	github.com/theopenlane/echox v0.2.1
+	github.com/theopenlane/echox v0.2.3
 	github.com/theopenlane/httpsling v0.2.2
 	github.com/theopenlane/iam v0.9.2
 	github.com/theopenlane/utils v0.4.4
@@ -65,7 +65,7 @@ require (
 	github.com/go-webauthn/webauthn v0.12.2 // indirect
 	github.com/go-webauthn/x v0.1.19 // indirect
 	github.com/goccy/go-json v0.10.5 // indirect
-	github.com/golang-jwt/jwt/v5 v5.2.1 // indirect
+	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/go-tpm v0.9.3 // indirect
