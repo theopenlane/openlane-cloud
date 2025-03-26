@@ -3,7 +3,7 @@ module github.com/theopenlane/openlane-cloud
 go 1.24.1
 
 require (
-	github.com/99designs/gqlgen v0.17.68
+	github.com/99designs/gqlgen v0.17.70
 	github.com/brianvoe/gofakeit/v7 v7.2.1
 	github.com/getkin/kin-openapi v0.131.0
 	github.com/invopop/jsonschema v0.13.0
@@ -28,7 +28,7 @@ require (
 	github.com/theopenlane/echo-prometheus v0.1.0
 	github.com/theopenlane/echox v0.2.1
 	github.com/theopenlane/httpsling v0.2.2
-	github.com/theopenlane/iam v0.9.3
+	github.com/theopenlane/iam v0.9.4
 	github.com/theopenlane/utils v0.4.4
 	golang.org/x/crypto v0.36.0
 	golang.org/x/text v0.23.0
