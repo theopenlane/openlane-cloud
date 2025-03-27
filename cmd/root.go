@@ -24,7 +24,7 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   appName,
 	Short: "cli for interacting with the openlane cloud server",
-	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
+	PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
 		return initCmdFlags(cmd)
 	},
 }

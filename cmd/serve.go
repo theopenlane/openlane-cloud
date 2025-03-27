@@ -15,7 +15,7 @@ import (
 var serveCmd = &cobra.Command{
 	Use:   "serve",
 	Short: "Start the openlane cloud API server",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(cmd *cobra.Command, _ []string) error {
 		return serve(cmd.Context())
 	},
 }
@@ -29,7 +29,7 @@ func init() {
 func serve(ctx context.Context) error {
 	serverOpts := []serveropts.ServerOption{}
 	serverOpts = append(serverOpts,
-		serveropts.WithConfigProvider(&config.ConfigProviderWithRefresh{}),
+		serveropts.WithConfigProvider(&config.ProviderWithRefresh{}),
 		serveropts.WithOpenlaneClient(),
 		serveropts.WithHTTPS(),
 		serveropts.WithMiddleware(),

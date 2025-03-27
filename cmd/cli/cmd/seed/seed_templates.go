@@ -15,7 +15,7 @@ import (
 var seedTemplateCmd = &cobra.Command{
 	Use:   "templates",
 	Short: "add templates to an existing seeded environment",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(cmd *cobra.Command, _ []string) error {
 		return initTemplateData(cmd.Context())
 	},
 }

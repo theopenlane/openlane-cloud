@@ -18,7 +18,7 @@ import (
 var organizationCreateCmd = &cobra.Command{
 	Use:   "create",
 	Short: "Create a new openlane org",
-	RunE: func(command *cobra.Command, args []string) error {
+	RunE: func(command *cobra.Command, _ []string) error {
 		return createOrganization(command.Context())
 	},
 }
@@ -33,7 +33,7 @@ func init() {
 }
 
 func createOrganization(ctx context.Context) error {
-	c, err := cmd.SetupClient(ctx, cmd.Config.String("host"))
+	c, err := cmd.SetupClient(cmd.Config.String("host"))
 	cobra.CheckErr(err)
 
 	// check if interactive flag is set, if it is, and some params are not set, prompt user for input

@@ -17,7 +17,7 @@ import (
 var seedOrgMembersCmd = &cobra.Command{
 	Use:   "org-members",
 	Short: "add users to an existing seeded organization",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(cmd *cobra.Command, _ []string) error {
 		return initOrgMemberData(cmd.Context())
 	},
 }
