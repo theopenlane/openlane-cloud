@@ -21,7 +21,7 @@ var seedInitCmd = &cobra.Command{
 	The user must provide a PAT ID to authorize the root organization.
 	A new API token will be created for the root organization and used to create the rest of the data.
 	`,
-	RunE: func(command *cobra.Command, args []string) error {
+	RunE: func(command *cobra.Command, _ []string) error {
 		return initSeedData(command.Context())
 	},
 }

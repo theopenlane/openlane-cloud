@@ -16,7 +16,7 @@ var (
 var seedGenerateCmd = &cobra.Command{
 	Use:   "generate",
 	Short: "generate random data for seeded environment with a single root organization",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return generate()
 	},
 }

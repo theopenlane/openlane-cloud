@@ -22,7 +22,7 @@ func NewWithDefaults() (Client, error) {
 }
 
 // New creates a new API v1 client that implements the Client interface
-func New(config Config, opts ...ClientOption) (_ Client, err error) {
+func New(config Config, opts ...Option) (_ Client, err error) {
 	c := &APIv1{
 		Config: config,
 	}

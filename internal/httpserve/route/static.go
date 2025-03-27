@@ -22,7 +22,7 @@ func registerOpenAPIHandler(router *Router) (err error) {
 		}),
 	}
 
-	if err := router.AddEchoOnlyRoute(path, method, route); err != nil {
+	if err := router.AddEchoOnlyRoute(route); err != nil {
 		return err
 	}
 
