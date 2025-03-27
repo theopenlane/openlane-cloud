@@ -272,8 +272,8 @@ github.com/theopenlane/core v0.8.2 h1:40Ve8VisRNHz0cW7dRVkNX6lfcVIuPEXAODcRdDxVt
 github.com/theopenlane/core v0.8.2/go.mod h1:Vye2ZhJIrVSOFmgZcM7OPlrBhbfWZ9+nKwMmsGJQP78=
 github.com/theopenlane/echo-prometheus v0.1.0 h1:1zMejBVHe5w4zLHS+k5FV9S/46QBiwO6ggTSKi6r/7E=
 github.com/theopenlane/echo-prometheus v0.1.0/go.mod h1:Eiiv1ZLXKMsteQ3T+H1tFfSSZuXSvQfZp95qr5hmGkA=
-github.com/theopenlane/echox v0.2.1 h1:ZhVkimmWxpKITf67oM57SrLWeIdnV8+dNXlC+VzlRaQ=
-github.com/theopenlane/echox v0.2.1/go.mod h1:4j/Hx0uoLk5gVzdA83Qqz7xBEmqpoEP+OnzVaw2p6/o=
+github.com/theopenlane/echox v0.2.3 h1:RlaEIFj03q9SR0YFmv7atlXtOe/5a3bRu4sF26pYSk0=
+github.com/theopenlane/echox v0.2.3/go.mod h1:xM2ECZW3/KEXZPetd1QAmN4mR8RetSwhDaySEQj+CHk=
 github.com/theopenlane/entx v0.5.1 h1:XU0QddW9VrK2K9Ak+0Q1g7kbzroBzAS9ODaF+eRymhE=
 github.com/theopenlane/entx v0.5.1/go.mod h1:VmDpPxVx0bZlCom1zpdYEWN8091zQGp+MOG+cdYVw+c=
 github.com/theopenlane/httpsling v0.2.2 h1:QqJo/VsjeiM6/RnWZpRQX3I7T62j5u9WdXo52zUWyi0=
