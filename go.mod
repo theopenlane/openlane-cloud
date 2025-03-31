@@ -29,7 +29,7 @@ require (
 	github.com/theopenlane/echox v0.2.1
 	github.com/theopenlane/httpsling v0.2.2
 	github.com/theopenlane/iam v0.9.4
-	github.com/theopenlane/utils v0.4.4
+	github.com/theopenlane/utils v0.4.5
 	golang.org/x/crypto v0.36.0
 	golang.org/x/text v0.23.0
 )
