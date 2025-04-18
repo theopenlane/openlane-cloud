@@ -3,7 +3,7 @@ module github.com/theopenlane/openlane-cloud
 go 1.24.1
 
 require (
-	github.com/99designs/gqlgen v0.17.70
+	github.com/99designs/gqlgen v0.17.71
 	github.com/brianvoe/gofakeit/v7 v7.2.1
 	github.com/getkin/kin-openapi v0.131.0
 	github.com/invopop/jsonschema v0.13.0
@@ -111,7 +111,7 @@ require (
 	github.com/theopenlane/entx v0.6.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
-	github.com/vektah/gqlparser/v2 v2.5.23 // indirect
+	github.com/vektah/gqlparser/v2 v2.5.25 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.4.1 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/wk8/go-ordered-map/v2 v2.1.8 // indirect
